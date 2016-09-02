@@ -1,165 +1,255 @@
-<title>WIP2</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-  .min-btn{
-    background: red;
-    color: #ffffff;
-    box-shadow: 2px 2px 1px grey;
-  }
-  .whbox{
-  box-shadow: 2px 2px 2px grey;
-  background: #ffffff;
-  color: #000000;
-  border-radius: 10px;
+<title>WIP3</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+<style>
+   body::before {
+   background-size: cover;
+   background-attachment: fixed;
+   content: '';
+   will-change: transform;
+   z-index: -1;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   top: 0;
+   position: fixed;
+   }
+   @media (max-width: 512px)  and (min-resolution: 1.5dppx),
+   (max-width: 1024px) and (max-resolution: 1.5dppx) {
+   body::before {
+   background-image: url('http://thesharpknife.com/images/knifehoriz.jpg');
+   }
+   }
+   @media (min-width: 513px)  and (max-width: 1024px) and (min-resolution: 1.5dppx),
+   (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
+   body::before {
+   background-image: url('http://thesharpknife.com/images/knifehoriz.jpg');
+   }
+   }
+   @media (min-width: 1025px) and (min-resolution: 1.5dppx),
+   (min-width: 2049px) and (max-resolution: 1.5dppx) {
+   body::before {
+   background-image: url('http://thesharpknife.com/images/knifehoriz.jpg');
+   }
+   }
+   .slideanim {visibility:hidden;}
+  .slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
 }
-.bigdog{
-  margin-top: 10px;
-  box-shadow: 3px 3px 3px grey;
-  background: #ffffff;
-  color: #000000;
-  border-radius: 10px;
+
+
+
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    } 
 }
-  div.pop-s{
-   box-shadow: 5px 5px 5px grey;
-   padding-bottom: 25px;
-   padding-left: 1px;
-   background: #ffffff;
-   color: #000000;
-   padding-top: 25px;
-}
-}
-  .bg-1 {
-      background-color: #ffffff;
-      color: #ffffff;
-      border-top-left-radius: 20px;
-      border-top-right-radius:20px;
-      
-      padding-top: 15px;
-  }
-  .bg-2 {
-      background-color: #ffffff;
-      color: #ffffff;
-  }
-  .bg-3 {
-    background-color:   #ffffff;
-    color: #3b5998;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-  }
-  .bg-4 {
-      background-color: #ffffff;
-      color: #ff0000;
-      border-radius: 20px;
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
     }
-  .ant {
-      color: #ff0000;
-      font-size: 22px;
-      font-weight: bold;
-  }
+}
 </style>
-
-
-<div class="container bg-1 text-center">
-  <div class="well bigdog">
-    <div class="ant">Who Are We?</div>
-    <img src="https://basicsplus.com/media/catalog/category/knife_sharpening.png" class="img-rounded center-block" alt="Bird" width="95%" height="35%">
-    <h3>We're Basicsplus a small chain of houseware|hardware stores located all around New York City "Nyc"</h3>
-  </div>
-  
-</div>
-
-<div class="container bg-2 text-center">
-<div class="well whbox">
-  <div class="ant">What We Do?</div>
-  <p>We offer knife sharpening for all types of "Wusthof Knives" including: Chef knives, Bread knives, Paring knives, and more. </p>
-  </div>
-</div>
-
-<div class="container bg-3 text-center">
-  <div class="well whbox">
-
-  <div class="ant">Info</div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-  <a target="_blank" href="https://basicsplus.com/shop-by-brand/wusthof.html"><button type="button" class="btn min-btn">Buy Now</button></a>
-  </div>
-</div>
-
-<div class="container-fluid bg-4 text-center">
-  <div class="ant">Where To Find Us?</div>
-  <div class="row slideanim">
-    <div class="col-md-3">
-    
-      <div class="uni text-center pop-s">
-            <h4><b>Basics Plus </b><br />121 University Pl <br />New York, NY, 10003 <br />Phone Number: <a href="tel: +12122284950">212-228-4950</a></h4>
-            <h4><strong>Knife Sharpening Available Here</strong></h4>
-            <a href="http://goo.gl/gFZagt" target="_blank"><button class="btn min-btn" type="button">Directions</button></a> <a tabindex="0" class="btn min-btn" role="button" title="Store Hours" type="button" data-placement="bottom" data-toggle="popover" data-trigger="focus" data-html="true" data-content="Monday - Friday: 8am-10pm &lt;br /&gt; Saturday: 9am-10pm &lt;br /&gt; Sunday: 10am-10pm" data-original-title="Store Hours">See Hours</a> <a href="tel: +12122284950"><button class="visible-xs-inline btn btn-info min-btn" type="button">Call</button></a>
-            
+<body>
+   <div class="container bg-1 text-center">
+      <div class="mdl-card mdl-cell mdl-cell--12-col">
+         <div class="mdl-card__media mdl-color-text--grey-50">
+            <h3>Welcome</h3>
          </div>
-    
-      
-    </div>
-    <div class="col-md-3">
-      <div class="riverside text-center pop-s">
-            <h5><b>Basics Plus </b><br />2315 Broadway <br />New York, NY, 10024 <br />Phone Number: <a href="tel: +12128737837">212-873-7837</a></h5>
-            <h4><strong>Knife Sharpening Available Here</strong></h4>
-            <a href="http://goo.gl/f4MoKp" target="_blank"><button class="btn min-btn" type="button">Directions</button></a> <a tabindex="0" class="btn min-btn" role="button" title="Store Hours" type="button" data-placement="bottom" data-toggle="popover" data-trigger="focus" data-html="true" data-content="Monday - Friday: 8am-10pm &lt;br /&gt; Saturday: 9am-10pm &lt;br /&gt; Sunday: 10am-10pm" data-original-title="Store Hours">See Hours</a> <a href="tel: +12128737837"><button class="visible-xs-inline btn btn-info min-btn" type="button">Call</button></a>
-            
+         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+            <div>
+               <strong>The Newist</strong>
+               <span>2 days ago</span>
+            </div>
+         </div>
       </div>
-      <hr>
-    </div>
-    <div class="col-md-3">
-      <div class="citi text-center pop-s">
-            <h5><b>Basics Plus </b><br />845 2nd Ave <br />New York, NY, 10017 <br />Phone Number: <a href="tel: +12126826311">212-682-6311</a></h5>
-            <h4><strong>Knife Sharpening Available Here</strong></h4>
-            <a href="http://goo.gl/ev3Ukh" target="_blank"><button class="btn min-btn" type="button">Directions</button></a> <a tabindex="0" class="btn min-btn" role="button" title="Store Hours" type="button" data-placement="bottom" data-toggle="popover" data-trigger="focus" data-html="true" data-content="Monday - Friday: 8am-10pm &lt;br /&gt; Saturday: 9am-10pm &lt;br /&gt; Sunday: 10am-10pm" data-original-title="Store Hours">See Hours</a> <a href="tel: +12126826311"><button class="visible-xs-inline btn btn-info min-btn" type="button">Call</button></a>
-            
+   </div>
+   <div class="container bg-2 text-center">
+      <div class="mdl-card mdl-cell mdl-cell--12-col">
+         <div class="mdl-card__media mdl-color-text--grey-50">
+            <h3>What We Do?</h3>
          </div>
-    </div>
-    <div class="col-md-3">
-      <div class="canal text-center pop-s">
-            <h5><b>Basics Plus </b><br />386 Canal ST <br />New York, NY, 10013 <br />Phone Number: <a href="tel: +12122197601">212-219-7601</a></h5>
-            <h4><strong>Knife Sharpening Available Here</strong></h4>
-            <a href="http://goo.gl/pghNcm" target="_blank"><button class="btn min-btn" type="button">Directions</button></a> <a tabindex="0" class="btn min-btn" role="button" title="Store Hours" type="button" data-placement="bottom" data-toggle="popover" data-trigger="focus" data-html="true" data-content="Monday - Friday: 8am-8pm &lt;br /&gt; Saturday: 9am-6pm &lt;br /&gt; Sunday: 10am-6pm" data-original-title="Store Hours">See Hours</a> <a href="tel: +12122197601"><button class="visible-xs-inline btn btn-info min-btn" type="button">Call</button></a>
+         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+            <div>
+               <strong>At Basics Plus:</strong><br />
+               <span>We offer knife sharpening for all types of "Wusthof Knives" including: Chef knives, Bread knives, Paring knives, and more.</span>
+            </div>
          </div>
-    </div>
-  </div>
-  <div class="row slideanim">
-    <div class="col-md-3">
-      <div class="first text-center pop-s">
-            <h5><b>Basics Plus </b><br />1621 First Ave <br />New York, NY, 10028 <br />Phone Number: <a href="tel: +12124521305">212-452-1305</a></h5>
-            <a href="http://goo.gl/wdRiFd" target="_blank"><button class="btn min-btn" type="button">Directions</button></a> <a tabindex="0" class="btn min-btn" role="button" title="Store Hours" type="button" data-placement="bottom" data-toggle="popover" data-trigger="focus" data-html="true" data-content="Monday - Friday: 8am-10pm &lt;br /&gt; Saturday: 9am-10pm &lt;br /&gt; Sunday: 10am-10pm" data-original-title="Store Hours">See Hours</a> <a href="tel: +12124521305"><button class="visible-xs-inline btn btn-info min-btn" type="button">Call</button></a>
       </div>
-    </div>
-    <div class="col-md-3">
-        <div class="john text-center pop-s">
-            <h5><b>Basics Plus </b><br />85 John ST <br />New York, NY, 10038 <br />Phone Number: <a href="tel: +12127916870">212-791-6870</a></h5>
-            <a href="http://goo.gl/MVIwXP" target="_blank"><button class="btn min-btn" type="button">Directions</button></a> <a tabindex="0" class="btn min-btn" role="button" title="Store Hours" type="button" data-placement="bottom" data-toggle="popover" data-trigger="focus" data-html="true" data-content="Monday - Friday: 9am-10pm &lt;br /&gt; Saturday: 9am-10pm &lt;br /&gt; Sunday: 10am-10pm" data-original-title="Store Hours">See Hours</a> <a href="tel: +12127916870"><button class="visible-xs-inline btn btn-info min-btn" type="button">Call</button></a>
+   </div>
+   <div class="container bg-3 ">
+      <div class="mdl-card mdl-cell mdl-cell--12-col">
+         <div class="mdl-card__media mdl-color-text--grey-50 text-center">
+            <h3>Info</h3>
          </div>
-    </div>
-    <div class="col-md-3">
-        <div class="t12th text-center pop-s">
-            <h5><b>Basics Plus </b><br />91 3rd Ave <br />New York, NY, 10003 <br />Phone Number: <a href="tel: +16465599244">212-559-9244</a></h5>
-             
-            <button class="btn min-btn" type="button">Directions</button></a> <a tabindex="0" class="btn min-btn" role="button" title="Store Hours" type="button" data-placement="bottom" data-toggle="popover" data-trigger="focus" data-html="true" data-content="Monday - Friday: 8am-10pm &lt;br /&gt; Saturday: 9am-10pm &lt;br /&gt; Sunday: 10am-10pm" data-original-title="Store Hours">See Hours</a> <a href="tel: +16465599244"><button class="visible-xs-inline btn btn-info min-btn" type="button">Call</button></a>
+         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 text-center">
+            <strong>At Basics Plus:</strong><br />
+            <span>We offer knife sharpening for all types of "Wusthof Knives" including: Chef knives, Bread knives, Paring knives, and more.</span>
+            <div class="mdl-card__actions min-btn text-center mdl-card--border mdl-card__actions">
+               <a target="_blank" href="https://basicsplus.com/shop-by-brand/wusthof.html"><button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Buy Now</button></a>
+            </div>
          </div>
-    </div>
-    <div class="col-md-3">
-        <div class="third text-center pop-s">
-            <h5><b>Basics Plus </b><br />194 3rd Ave <br />New York, NY, 10003 <br />Phone Number: <a href="tel: +12124322230">212-219-7601</a></h5>
-            <a href="http://goo.gl/iLByDJ" target="_blank"><button class="btn min-btn" type="button">Directions</button></a> <a tabindex="0" class="btn min-btn" role="button" title="Store Hours" type="button" data-placement="bottom" data-toggle="popover" data-trigger="focus" data-html="true" data-content="Monday - Friday: 8am-10pm &lt;br /&gt; Saturday: 9am-10pm &lt;br /&gt; Sunday: 10am-10pm" data-original-title="Store Hours">See Hours</a> <a href="tel: +12124322230"><button class="visible-xs-inline btn btn-info min-btn" type="button">Call</button></a>
+      </div>
+   </div>
+   <div class="container bg-4">
+      <div class="mdl-card mdl-cell mdl-cell--12-col slideanim">
+         <div class="mdl-card__media mdl-color-text--grey-50 text-center slideanim">
+            <h3>Where to Find Us?</h3>
          </div>
-    </div>
-  </div>
-</div>
-<footer class="text-center">
-    <p>Copyright © 2016 Basics Plus™</p>
-  </footer>
+         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 text-center">
+            <main class="mdl-layout__content slideanim">
+               <div class="mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+                     <div class="mdl-card mdl-shadow--4dp mdl-card--border">
+                        <div class="mdl-card__media"><img src="https://basicsplus.com/skin/frontend/rwd/default/images/logo.png" border="0" alt="" >
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                           91 3rd Ave <br /> New York, NY, 10003 <br />Phone: 212-488-6586
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                           <a href="http://goo.gl/f4MoKp" target="_blank"><button class="mdl-button mdl-js-button mdl-js-ripple-effect">Directions</button></a>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect ">See Hours</button>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect visible-xs-inline">Call</button>  
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+                     <div class="mdl-card mdl-shadow--4dp mdl-card--border">
+                        <div class="mdl-card__media"><img src="https://basicsplus.com/skin/frontend/rwd/default/images/logo.png" border="0" alt="" >
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                           91 3rd Ave <br /> New York, NY, 10003 <br />Phone: 212-488-6586
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                           <a href="http://goo.gl/f4MoKp" target="_blank"><button class="mdl-button mdl-js-button mdl-js-ripple-effect">Directions</button></a>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect ">See Hours</button>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect visible-xs-inline">Call</button>  
+                        </div>
+                     </div>
+                  </div>
+                </div>
+                <div class="mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+                     <div class="mdl-card mdl-shadow--4dp mdl-card--border">
+                        <div class="mdl-card__media"><img src="https://basicsplus.com/skin/frontend/rwd/default/images/logo.png" border="0" alt="" >
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                           91 3rd Ave <br /> New York, NY, 10003 <br />Phone: 212-488-6586
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                           <a href="http://goo.gl/f4MoKp" target="_blank"><button class="mdl-button mdl-js-button mdl-js-ripple-effect">Directions</button></a>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect ">See Hours</button>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect visible-xs-inline">Call</button>  
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+                     <div class="mdl-card mdl-shadow--4dp mdl-card--border">
+                        <div class="mdl-card__media"><img src="https://basicsplus.com/skin/frontend/rwd/default/images/logo.png" border="0" alt="" >
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                           91 3rd Ave <br /> New York, NY, 10003 <br />Phone: 212-488-6586
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                           <a href="http://goo.gl/f4MoKp" target="_blank"><button class="mdl-button mdl-js-button mdl-js-ripple-effect">Directions</button></a>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect ">See Hours</button>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect visible-xs-inline">Call</button>  
+                        </div>
+                     </div>
+                  </div>
+                </div>
+                <div class="mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+                     <div class="mdl-card mdl-shadow--4dp mdl-card--border">
+                        <div class="mdl-card__media"><img src="https://basicsplus.com/skin/frontend/rwd/default/images/logo.png" border="0" alt="" >
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                           91 3rd Ave <br /> New York, NY, 10003 <br />Phone: 212-488-6586
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                           <a href="http://goo.gl/f4MoKp" target="_blank"><button class="mdl-button mdl-js-button mdl-js-ripple-effect">Directions</button></a>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect ">See Hours</button>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect visible-xs-inline">Call</button>  
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+                     <div class="mdl-card mdl-shadow--4dp mdl-card--border">
+                        <div class="mdl-card__media"><img src="https://basicsplus.com/skin/frontend/rwd/default/images/logo.png" border="0" alt="" >
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                           91 3rd Ave <br /> New York, NY, 10003 <br />Phone: 212-488-6586
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                           <a href="http://goo.gl/f4MoKp" target="_blank"><button class="mdl-button mdl-js-button mdl-js-ripple-effect">Directions</button></a>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect ">See Hours</button>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect visible-xs-inline">Call</button>  
+                        </div>
+                     </div>
+                  </div>
+                </div>
+                <div class="mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+                     <div class="mdl-card mdl-shadow--4dp mdl-card--border">
+                        <div class="mdl-card__media"><img src="https://basicsplus.com/skin/frontend/rwd/default/images/logo.png" border="0" alt="" >
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                           91 3rd Ave <br /> New York, NY, 10003 <br />Phone: 212-488-6586
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                           <a href="http://goo.gl/f4MoKp" target="_blank"><button class="mdl-button mdl-js-button mdl-js-ripple-effect">Directions</button></a>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect ">See Hours</button>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect visible-xs-inline">Call</button>  
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+                     <div class="mdl-card mdl-shadow--4dp mdl-card--border">
+                        <div class="mdl-card__media"><img src="https://basicsplus.com/skin/frontend/rwd/default/images/logo.png" border="0" alt="" >
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                           91 3rd Ave <br /> New York, NY, 10003 <br />Phone: 212-488-6586
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                           <a href="http://goo.gl/f4MoKp" target="_blank"><button class="mdl-button mdl-js-button mdl-js-ripple-effect">Directions</button></a>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect ">See Hours</button>
+                           <button class="mdl-button mdl-js-button mdl-js-ripple-effect visible-xs-inline">Call</button>  
+                        </div>
+                     </div>
+                  </div>
+                </div>
+            </main>
+         </div>
+      </div>
+   </div>
+</body>
 <script>
-  $(window).scroll(function() {
+$(window).scroll(function() {
   $(".slideanim").each(function(){
     var pos = $(this).offset().top;
 
@@ -169,7 +259,7 @@
     }
   });
 });
-  $(document).ready(function(){
-       $('[data-toggle="popover"]').popover();
-   });
+   $(document).ready(function(){
+         $('[data-toggle="popover"]').popover();
+     });
 </script>
